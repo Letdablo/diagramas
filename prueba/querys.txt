@@ -1,0 +1,25 @@
+SELECT
+  profesor.nombre,
+  profesor.apellidos
+FROM
+  profesor
+  INNER JOIN departamento ON departamento.id = profesor.departamento_id
+WHERE
+  profesor.sueldo > 30000
+  AND departamento.presupuesto > 200000
+
+
+
+UPDATE asignatura SET duracion = 50 WHERE duracion<50
+UPDATE asignatura SET duracion = IF(duracion < 50, 50, duracion)
+
+
+DELETE a.*, b.* 
+FROM alumno a 
+LEFT JOIN matricula b 
+ON a.id = b.alumno_id 
+WHERE a.DNI = 33444555K
+
+
+
+
